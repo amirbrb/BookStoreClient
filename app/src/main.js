@@ -10,7 +10,7 @@ import $ from 'jquery'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false;
-const baseUrl = 'https://ukholo-amirbrb.c9users.io';
+const baseUrl = 'https://evening-spire-37771.herokuapp.com';
 const routes = [
   { path: '/', component: BookStore },
   { path: '/add', component: NewBookForm, props: { isReadOnly: false } },
