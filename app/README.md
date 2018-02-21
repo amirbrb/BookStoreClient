@@ -1,6 +1,4 @@
-# timer-vue
-
-> Timer using vueJs
+# Bookstore Client
 
 ## Build Setup
 
