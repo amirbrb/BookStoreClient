@@ -23,6 +23,9 @@ function deleteBooks(isbnS, callback){
 		    type: 'DELETE',
 		    success: function(result) {
 		    	callback(isbn)
+		    },
+		    error: function(result){
+		    	console.log(result)
 		    }
 		});
 	})
@@ -31,11 +34,14 @@ function deleteBooks(isbnS, callback){
 function addBook(model, callback){
 	var data = model;
 	$.ajax({
-    	url: '/books',
+    	url: '/books/',
 	    data: data,
 	    type: 'PUT',
 	    success: function(result) {
 	        callback(result);
+	    },
+	    error: function(result){
+	    	console.log(result)
 	    }
 	});
 }

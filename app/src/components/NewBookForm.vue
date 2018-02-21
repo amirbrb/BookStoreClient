@@ -125,15 +125,16 @@ export default {
     cancel(){
       this.$router.push('/');
     },
-    addBook(){
-      debugger;
+    addBook(event){
+      event.preventDefault();
+      var self = this;
       var $j = window.jQuery.noConflict();
-      this.bookModel.publicationDate = $j('#bookDate').val();
-      var data = JSON.stringify(this.bookModel)
+      self.bookModel.publicationDate = $j('#bookDate').val();
+      var data = JSON.stringify(self.bookModel)
       bookDataService.addBook(data, function(){
-
+        self.$router.push('/');
       });
-      this.$router.push('/');
+      return false;
     },
     getGenere(genere){
       for(var g in this.geners){
